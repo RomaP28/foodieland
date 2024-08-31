@@ -1,0 +1,63 @@
+header
+  padding: 4rem 0
+  position: fixed
+  width: 100%
+  top: 0
+  left: 0
+  background: #ffffff
+  border-bottom: .1rem solid rgba(0, 0, 0, .1)
+
+  nav,
+  ul
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+
+  .logo
+    width: 12rem
+
+  .menu
+    column-gap: 6rem
+    li
+      border-bottom: .1rem solid transparent
+      &.current-menu-item,
+      &:hover
+        border-bottom: .1rem solid #FF7967
+        a
+          color: #FF7967
+
+    a
+      transition: color .3s ease-in-out
+      color: #000000
+      font-family: $inter-medium
+      font-size: 1.6rem
+
+  .social-links
+    column-gap: 4rem
+    li
+      width: 2.2rem
+      height: 2.2rem
+      transition: background .3s ease-in-out
+      a
+        width: 100%
+        height: 100%
+        display: inline-block
+
+  .facebook
+    background: url(../img/facebook.svg) no-repeat center center/contain
+    &:hover
+      background: url(../img/facebook-hover.svg) no-repeat center center/contain
+
+  .twitter
+    background: url(../img/twitter.svg) no-repeat center center/contain
+    &:hover
+      background: url(../img/twitter-hover.svg) no-repeat center center/contain
+  .instagram
+    background: url(../img/instagram.svg) no-repeat center center/contain
+    &:hover
+      background: url(../img/instagram-hover.svg) no-repeat center center/contain
+
+
+main
+  padding-top: 11rem

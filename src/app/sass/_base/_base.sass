@@ -11,7 +11,7 @@ html
   font-size: 62.5%
   scroll-behavior: smooth
   @media(max-width: 4000px)
-    font-size: calc(10/1920 * 100vw)
+    font-size: calc(10/1440 * 100vw)
 
   @media(max-width: 768px)
     font-size: calc(10/414 * 100vw)
@@ -56,44 +56,44 @@ ul
 
 .container
   width: 100%
-  max-width: 117rem
+  max-width: 128rem
   margin: 0 auto
 
 h2
-  color: #F3216D
+  color: #000
   font-family: $inter-semibold
-  font-size: 5rem
-  line-height: 6.5rem
-  @media(max-width: 768px)
-    font-size: 3.5rem
-    line-height: 4.6rem
+  font-size: 4.8rem
+  line-height: 1
+  //@media(max-width: 768px)
+  //  font-size: 3.5rem
+  //  line-height: 4.6rem
 
 
 .btn
-  width: 100%
+  width: fit-content
   font-family: $inter-semibold
   cursor: pointer
   color: #fff
-  background: #F3216D
-  border: .1rem solid #F3216D
-  font-size: 2rem
-  line-height: 3.3rem
-  padding: .8rem 0 1.1rem
+  background: #000
+  border: .1rem solid #000
+  font-size: 1.4rem
+  line-height: 1
+  padding: 2.1rem 3.7rem
   display: flex
   align-items: center
   justify-content: center
   transition: all .2s ease-in-out
-  border-radius: 2.8rem
+  border-radius: 1.6rem
   position: relative
 
   &:hover
     background: #fff
-    color: #F3216D
+    color: #000
 
   &.light
     border: none
     background: #fff
-    color: #F3216D
+    color: #000
     transition: all .4s ease
     overflow: hidden
     position: relative
@@ -101,7 +101,7 @@ h2
 
 
     &:hover
-      background: #F3216D
+      background: #000
       color: #fff
 
   svg
