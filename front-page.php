@@ -139,7 +139,6 @@
             </div>
         </div>
     </section>
-    
     <section class="categories">
         <div class="container">
             <div class="title">
@@ -182,19 +181,19 @@
             </div>
         </div>
     </section>
-    
     <section class="recipes">
-        <h2>Simple and tasty 4.8</h2>
-        <p class="subtitle">Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim </p>
         <div class="container">
+            <h2>Simple and tasty 4.8</h2>
+            <p class="subtitle">Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim </p>
             <div class="swiper">
                 <div class="swiper-wrapper">
-                    <a href="#" class="swiper-slide">
+                    <div class="swiper-slide">
+                        <div class="add-to-favorite"></div>
                         <div class="img-wrap">
-                            <img src="<?php echo get_template_directory_uri(). '/src/app/img/recipe1.webp'?>" alt="">
+                            <img src="<?php echo get_template_directory_uri(). '/src/app/img/recipe1.webp'?>" alt="recipe">
                         </div>
                         <h3>
-                            Big and Juicy Wagyu Beef Cheeseburger
+                            <a href="#">Big and Juicy Wagyu Beef Cheeseburger</a>
                         </h3>
                         <div class="bottom">
                             <div class="time">
@@ -206,13 +205,14 @@
                                 Snack
                             </div>
                         </div>
-                    </a>
-                    <a href="#" class="swiper-slide">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="add-to-favorite"></div>
                         <div class="img-wrap">
                             <img src="<?php echo get_template_directory_uri(). '/src/app/img/recipe2.webp'?>" alt="">
                         </div>
                         <h3>
-                            Fresh Lime Roasted Salmon with Ginger Sauce
+                            <a href="#">Fresh Lime Roasted Salmon with Ginger Sauce</a>
                         </h3>
                         <div class="bottom">
                             <div class="time">
@@ -224,13 +224,14 @@
                                 Fish
                             </div>
                         </div>
-                    </a>
-                    <a href="#" class="swiper-slide">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="add-to-favorite"></div>
                         <div class="img-wrap">
                             <img src="<?php echo get_template_directory_uri(). '/src/app/img/recipe3.webp'?>" alt="">
                         </div>
                         <h3>
-                            Strawberry Oatmeal Pancake with Honey Syrup
+                            <a href="#">Strawberry Oatmeal Pancake with Honey Syrup</a>
                         </h3>
                         <div class="bottom">
                             <div class="time">
@@ -242,13 +243,14 @@
                                 Breakfast
                             </div>
                         </div>
-                    </a>
-                    <a href="#" class="swiper-slide">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="add-to-favorite"></div>
                         <div class="img-wrap">
                             <img src="<?php echo get_template_directory_uri(). '/src/app/img/recipe4.webp'?>" alt="">
                         </div>
                         <h3>
-                            Fresh and Healthy Mixed Mayonnaise Salad
+                            <a href="#">Fresh and Healthy Mixed Mayonnaise Salad</a>
                         </h3>
                         <div class="bottom">
                             <div class="time">
@@ -260,13 +262,14 @@
                                 Healthy
                             </div>
                         </div>
-                    </a>
-                    <a href="#" class="swiper-slide">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="add-to-favorite"></div>
                         <div class="img-wrap">
                             <img src="<?php echo get_template_directory_uri(). '/src/app/img/recipe5.webp'?>" alt="">
                         </div>
                         <h3>
-                            Chicken Meatballs with Cream Cheese
+                            <a href="#">Chicken Meatballs with Cream Cheese</a>
                         </h3>
                         <div class="bottom">
                             <div class="time">
@@ -278,16 +281,17 @@
                                 Meat
                             </div>
                         </div>
-                    </a>
-                    <a href="#" class="swiper-slide commercial">
+                    </div>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="swiper-slide commercial">
                         <img src="<?php echo get_template_directory_uri() . '/src/app/img/ads.webp'; ?>" alt="">
                     </a>
-                    <a href="#" class="swiper-slide">
+                    <div class="swiper-slide">
+                        <div class="add-to-favorite"></div>
                         <div class="img-wrap">
                             <img src="<?php echo get_template_directory_uri(). '/src/app/img/recipe6.webp'?>" alt="">
                         </div>
                         <h3>
-                            Fruity Pancake with Orange & Blueberry
+                            <a href="#">Fruity Pancake with Orange & Blueberry</a>
                         </h3>
                         <div class="bottom">
                             <div class="time">
@@ -299,13 +303,14 @@
                                 Sweet
                             </div>
                         </div>
-                    </a>
-                    <a href="#" class="swiper-slide">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="add-to-favorite"></div>
                         <div class="img-wrap">
                             <img src="<?php echo get_template_directory_uri(). '/src/app/img/recipe7.webp'?>" alt="">
                         </div>
                         <h3>
-                            The Best Easy One Pot Chicken and Rice
+                            <a href="#">The Best Easy One Pot Chicken and Rice</a>
                         </h3>
                         <div class="bottom">
                             <div class="time">
@@ -317,13 +322,14 @@
                                 Snack
                             </div>
                         </div>
-                    </a>
-                    <a href="#" class="swiper-slide">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="add-to-favorite"></div>
                         <div class="img-wrap">
                             <img src="<?php echo get_template_directory_uri(). '/src/app/img/recipe8.webp'?>" alt="">
                         </div>
                         <h3>
-                            The Creamiest Creamy Chicken and Bacon Pasta
+                            <a href="#">The Creamiest Creamy Chicken and Bacon Pasta</a>
                         </h3>
                         <div class="bottom">
                             <div class="time">
@@ -335,19 +341,11 @@
                                 Noodles
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
-
-
-
-
-            
         </div>
-
-
     </section>
-
     <section class="chef">
         <div class="container">
             <div class="info">
@@ -365,7 +363,6 @@
             </div>
         </div>
     </section>
-
     <section class="instagram-section">
         <h2>
             Check out @foodieland on Instagram
@@ -389,7 +386,187 @@
         </div>
         <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="btn">Visit Our Instagram</a>
     </section>
-
+    <section class="day-recipes">
+        <div class="container">
+            <div class="title">
+                <h2>
+                    Try this delicious recipe<br>
+                    to make your day
+                </h2>
+                <p class="subtitle">
+                    Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim
+                </p>
+            </div>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="add-to-favorite"></div>
+                        <div class="img-wrap">
+                            <img src="<?php echo get_template_directory_uri(). '/src/app/img/001.webp'?>" alt="recipe">
+                        </div>
+                        <h3>
+                            <a href="#">Mixed Tropical Fruit Salad with Superfood Boosts</a>
+                        </h3>
+                        <div class="bottom">
+                            <div class="time">
+                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?>" alt="time">
+                                30 Minutes
+                            </div>
+                            <div class="cat">
+                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?>" alt="category">
+                                Healthy
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="add-to-favorite"></div>
+                        <div class="img-wrap">
+                            <img src="<?php echo get_template_directory_uri(). '/src/app/img/002.webp'?>" alt="">
+                        </div>
+                        <h3>
+                            <a href="#">FBig and Juicy Wagyu Beef Cheeseburger</a>
+                        </h3>
+                        <div class="bottom">
+                            <div class="time">
+                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?>" alt="time">
+                                30 Minutes
+                            </div>
+                            <div class="cat">
+                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?>" alt="category">
+                                Western
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="add-to-favorite"></div>
+                        <div class="img-wrap">
+                            <img src="<?php echo get_template_directory_uri(). '/src/app/img/003.webp'?>" alt="">
+                        </div>
+                        <h3>
+                            <a href="#">Healthy Japanese Fried Rice with Asparagus</a>
+                        </h3>
+                        <div class="bottom">
+                            <div class="time">
+                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?>" alt="time">
+                                30 Minutes
+                            </div>
+                            <div class="cat">
+                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?>" alt="category">
+                                Healthy
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="add-to-favorite"></div>
+                        <div class="img-wrap">
+                            <img src="<?php echo get_template_directory_uri(). '/src/app/img/004.webp'?>" alt="">
+                        </div>
+                        <h3>
+                            <a href="#">Cauliflower Walnut Vegetarian Taco Meat</a>
+                        </h3>
+                        <div class="bottom">
+                            <div class="time">
+                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?>" alt="time">
+                                30 Minutes
+                            </div>
+                            <div class="cat">
+                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?>" alt="category">
+                                Eastern
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="add-to-favorite"></div>
+                        <div class="img-wrap">
+                            <img src="<?php echo get_template_directory_uri(). '/src/app/img/005.webp'?>" alt="">
+                        </div>
+                        <h3>
+                            <a href="#">Rainbow Chicken Salad with Almond Honey Mustard Dressing</a>
+                        </h3>
+                        <div class="bottom">
+                            <div class="time">
+                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?>" alt="time">
+                                30 Minutes
+                            </div>
+                            <div class="cat">
+                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?>" alt="category">
+                                Healthy
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="add-to-favorite"></div>
+                        <div class="img-wrap">
+                            <img src="<?php echo get_template_directory_uri(). '/src/app/img/006.webp'?>" alt="">
+                        </div>
+                        <h3>
+                            <a href="#">Barbeque Spicy Sandwiches with Chips</a>
+                        </h3>
+                        <div class="bottom">
+                            <div class="time">
+                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?>" alt="time">
+                                30 Minutes
+                            </div>
+                            <div class="cat">
+                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?>" alt="category">
+                                Snack
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="add-to-favorite"></div>
+                        <div class="img-wrap">
+                            <img src="<?php echo get_template_directory_uri(). '/src/app/img/007.webp'?>" alt="">
+                        </div>
+                        <h3>
+                            <a href="#">Firecracker Vegan Lettuce Wraps - Spicy!</a>
+                        </h3>
+                        <div class="bottom">
+                            <div class="time">
+                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?>" alt="time">
+                                30 Minutes
+                            </div>
+                            <div class="cat">
+                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?>" alt="category">
+                                Seafood
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="add-to-favorite"></div>
+                        <div class="img-wrap">
+                            <img src="<?php echo get_template_directory_uri(). '/src/app/img/008.webp'?>" alt="">
+                        </div>
+                        <h3>
+                            <a href="#">Chicken Ramen Soup with Mushroom</a>
+                        </h3>
+                        <div class="bottom">
+                            <div class="time">
+                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?>" alt="time">
+                                30 Minutes
+                            </div>
+                            <div class="cat">
+                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?>" alt="category">
+                                Japanese
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="subscribe">
+        <div class="container">
+            <h2>Deliciousness to your inbox</h2>.
+            <p class="subtitle">Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim</p>
+            <form action="/">
+                <div class="wrapper">
+                    <input type="email" placeholder="Your email address..." required>
+                    <input class="btn" type="submit" value="Subscribe">
+                </div>
+            </form>
+        </div>
+    </section>
 </main>
 
 

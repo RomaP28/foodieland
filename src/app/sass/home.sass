@@ -177,9 +177,9 @@
     text-align: center
     max-width: 70rem
     margin: 2.4rem auto 0
-  .container
-    margin-top: 11.2rem
+
   .swiper
+    margin-top: 11.2rem
     &-wrapper
       display: grid
       grid-template: repeat(3, 43.4rem) / repeat(3, auto)
@@ -200,9 +200,10 @@
 
     h3
       margin-top: 2.4rem
-      color: #000
-      font-size: 2.4rem
-      line-height: 1
+      a
+        color: #000
+        font-size: 2.4rem
+        line-height: 1
 
     .bottom
       margin-top: 2.4rem
@@ -216,6 +217,11 @@
       display: flex
       align-items: center
       column-gap: 1rem
+
+
+  .add-to-favorite
+    top: 3.6rem
+    right: 3.6rem
 
 .chef
   padding: 13.4rem 0 16rem
@@ -238,6 +244,7 @@
     margin-top: 7.2rem
 .instagram-section
   padding: 8rem 0
+  background-image: linear-gradient(to bottom, rgba(231, 239, 253, 0), rgba(231, 239, 253, 1))
   h2, .subtitle
     text-align: center
 
@@ -268,3 +275,83 @@
     &:hover
       &:before
         background: url(../img/instagram.svg) no-repeat center center/contain
+.day-recipes
+  padding: 16rem 0
+  .title
+    display: flex
+    align-items: center
+    h2, p
+      flex: 1
+      max-width: 50%
+
+  .swiper
+    margin-top: 8rem
+    &-wrapper
+      display: grid
+      grid-template: repeat(2, auto) / repeat(4, 29rem)
+      gap: 4rem
+    &-slide
+      overflow: hidden
+
+      &.commercial
+        background: none
+        border-radius: 0
+
+      .img-wrap
+        border-radius: 3rem
+        overflow: hidden
+
+    h3
+      margin-top: 2.4rem
+      a
+        color: #000
+        font-family: $inter-semibold
+        font-size: 1.8rem
+        line-height: 1
+
+    .bottom
+      margin-top: 2.4rem
+      column-gap: 2.4rem
+      color: rgba(0, 0, 0, .6)
+      img
+        width: 2.4rem
+
+
+    .bottom, .cat, .time
+      display: flex
+      align-items: center
+      column-gap: 1rem
+
+  .add-to-favorite
+    top: 1.6rem
+    right: 1.6rem
+.subscribe
+  .container
+    background-image: url(../img/left-bg.webp), url(../img/right-bg.webp), linear-gradient(#E7F9FD, #E7F9FD)
+    background-repeat: no-repeat
+    background-size: 30rem auto, 35rem auto, cover
+    background-position: bottom left, bottom right, center center
+    padding: 8rem 0
+    border-radius: 6rem
+    text-align: center
+
+  .subtitle
+    margin: 2.7rem auto 0
+    max-width: 62rem
+
+  .wrapper
+    background: #ffffff
+    border-radius: 2.4rem
+    display: flex
+    max-width: 48rem
+    margin: 6.1rem auto 0
+    padding: 1rem
+
+    [type="email"]
+      width: 100%
+      border: none
+      outline: none
+      font-size: 1.4rem
+      padding-left: 2.2rem
+
+@import "_components/_footer"

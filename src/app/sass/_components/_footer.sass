@@ -1,0 +1,68 @@
+footer
+  padding: 16rem 0 4.8rem
+
+  .top, ul
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  .top
+    padding-bottom: 4.8rem
+    border-bottom: .1rem solid rgba(0, 0, 0, .1)
+
+  .logo
+    display: inline-block
+    max-width: 11rem
+
+  .menu
+    column-gap: 6rem
+    li
+      border-bottom: .1rem solid transparent
+      &.current-menu-item,
+      &:hover
+        border-bottom: .1rem solid #FF7967
+        a
+          color: #FF7967
+
+    a
+      transition: color .3s ease-in-out
+      color: #000000
+      font-family: $inter-medium
+      font-size: 1.6rem
+
+  .bottom
+    margin-top: 4.8rem
+    display: flex
+    p
+      text-transform: uppercase
+      margin-left: auto
+      span
+        display: inline-block
+        transform: translateY(-.1rem)
+
+  .social-links
+    max-width: fit-content
+    margin-left: auto
+    column-gap: 4rem
+    li
+      width: 2.2rem
+      height: 2.2rem
+      transition: background .3s ease-in-out
+      a
+        width: 100%
+        height: 100%
+        display: inline-block
+
+  .facebook
+    background: url(../img/facebook.svg) no-repeat center center/contain
+    &:hover
+      background: url(../img/facebook-hover.svg) no-repeat center center/contain
+
+  .twitter
+    background: url(../img/twitter.svg) no-repeat center center/contain
+    &:hover
+      background: url(../img/twitter-hover.svg) no-repeat center center/contain
+  .instagram
+    background: url(../img/instagram.svg) no-repeat center center/contain
+    &:hover
+      background: url(../img/instagram-hover.svg) no-repeat center center/contain

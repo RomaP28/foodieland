@@ -22,6 +22,9 @@
 		}
 	});
 	
+	$('.add-to-favorite').on('click', function() {
+		$(this).toggleClass('favorite')
+	})
 	
 	
 })(jQuery);
