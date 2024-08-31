@@ -1,0 +1,126 @@
+@import "_fonts"
+
+*,
+*::after,
+*::before
+  margin: 0
+  padding: 0
+  box-sizing: inherit
+
+html
+  font-size: 62.5%
+  scroll-behavior: smooth
+  @media(max-width: 4000px)
+    font-size: calc(10/1920 * 100vw)
+
+  @media(max-width: 768px)
+    font-size: calc(10/414 * 100vw)
+
+
+body
+  font-family: $inter-regular
+  box-sizing: border-box
+  overflow-x: hidden
+  &::-webkit-scrollbar
+    display: none
+
+  .cky-revisit-bottom-left
+    @media(max-width: 768px)
+      bottom: 5rem
+main
+  overflow-x: hidden
+
+html.lock,
+html.lock body
+  overflow: hidden
+  position: relative
+  //height: -webkit-fill-available;
+  height: 100vh
+
+svg,
+img
+  width: 100%
+  height: auto
+
+a
+  &:link,
+  &:visited
+    text-decoration: none
+
+ul
+  li
+    list-style: none
+
+.swiper-slide
+  box-sizing: border-box
+
+.container
+  width: 100%
+  max-width: 117rem
+  margin: 0 auto
+
+h2
+  color: #F3216D
+  font-family: $inter-semibold
+  font-size: 5rem
+  line-height: 6.5rem
+  @media(max-width: 768px)
+    font-size: 3.5rem
+    line-height: 4.6rem
+
+
+.btn
+  width: 100%
+  font-family: $inter-semibold
+  cursor: pointer
+  color: #fff
+  background: #F3216D
+  border: .1rem solid #F3216D
+  font-size: 2rem
+  line-height: 3.3rem
+  padding: .8rem 0 1.1rem
+  display: flex
+  align-items: center
+  justify-content: center
+  transition: all .2s ease-in-out
+  border-radius: 2.8rem
+  position: relative
+
+  &:hover
+    background: #fff
+    color: #F3216D
+
+  &.light
+    border: none
+    background: #fff
+    color: #F3216D
+    transition: all .4s ease
+    overflow: hidden
+    position: relative
+    z-index: 1
+
+
+    &:hover
+      background: #F3216D
+      color: #fff
+
+  svg
+    transition: all .3s ease-in-out
+  .spinner
+    pointer-events: none
+    opacity: 0
+    position: absolute
+    left: 2rem
+    top: 50%
+    transform: translateY(-50%)
+    transition: opacity .3s ease-in-out
+    width: 3.4rem
+
+  &.load
+    pointer-events: none
+    .spinner
+      opacity: 1
+
+  @media (max-width: 768px)
+    padding: 1rem
+
