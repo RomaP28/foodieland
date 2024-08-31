@@ -10,11 +10,8 @@
     <?php wp_head(); ?>
 
     <link rel="preload" href="<?php echo get_template_directory_uri() . '/src/app/fonts/Inter_24pt-Regular.woff'; ?>" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="<?php echo get_template_directory_uri() . '/src/app/fonts/Inter_24pt-Regular.woff2'; ?>" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="<?php echo get_template_directory_uri() . '/src/app/fonts/Inter_24pt-Medium.woff'; ?>" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="<?php echo get_template_directory_uri() . '/src/app/fonts/Inter_24pt-Medium.woff2'; ?>" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="<?php echo get_template_directory_uri() . '/src/app/fonts/Inter_24pt-SemiBold.woff'; ?>" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="<?php echo get_template_directory_uri() . '/src/app/fonts/Inter_24pt-SemiBold.woff2'; ?>" as="font" type="font/woff2" crossorigin="anonymous">
 
 
 </head>

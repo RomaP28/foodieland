@@ -13,6 +13,15 @@
 		spaceBetween: space,
 	})
 	
+	$(window).scroll(function() {
+		var $height = $(window).scrollTop();
+		if($height > 50) {
+			$('header').addClass('active');
+		} else {
+			$('header').removeClass('active');
+		}
+	});
+	
 	
 	
 })(jQuery);
