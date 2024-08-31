@@ -3,14 +3,17 @@
 
 .hero
   padding-top: 4rem
-  .swiper-slide
-    display: flex
-    border-radius: 5rem
-    overflow: hidden
-    cursor: grab
-
-    &:active
-      cursor: grabbing
+  .swiper
+    &-wrapper
+      max-height: 64rem
+    &-slide
+      display: flex
+      border-radius: 5rem
+      overflow: hidden
+      cursor: grab
+      height: auto
+      &:active
+        cursor: grabbing
 
   .featured
     position: absolute
@@ -150,10 +153,11 @@
       padding: 0 4rem 10.2rem
       height: 20.2rem
       text-align: center
-      background-size: auto 50%
+      background-size: auto 0
       background-repeat: no-repeat
       background-position: bottom center
       border-radius: 0 0 3rem 3rem
+      transition: background-size .4s ease-in-out
       img
         max-width: 10rem
       .shadow
@@ -162,6 +166,14 @@
         z-index: -1
         top: 2rem
         right: 2rem
+        opacity: 0
+        transition: opacity .2s ease-in-out
+
+      &:hover
+        background-size: auto 50%
+        .shadow
+          opacity: 1
+
 
       .cat-title
         color: #000
@@ -197,6 +209,14 @@
       .img-wrap
         border-radius: 3rem
         overflow: hidden
+
+        img
+          transition: transform .3s ease-in-out
+
+      &:hover
+        .img-wrap
+          img
+            transform: scale(1.1)
 
     h3
       margin-top: 2.4rem
@@ -300,7 +320,13 @@
       .img-wrap
         border-radius: 3rem
         overflow: hidden
+        img
+          transition: transform .3s ease-in-out
 
+      &:hover
+        .img-wrap
+          img
+            transform: scale(1.1)
     h3
       margin-top: 2.4rem
       a
@@ -353,5 +379,6 @@
       outline: none
       font-size: 1.4rem
       padding-left: 2.2rem
+
 
 @import "_components/_footer"

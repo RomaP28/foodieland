@@ -1,5 +1,9 @@
 (function($){
 	
+	setTimeout(function(){
+		$('#preloader').fadeOut('slow');
+	}, 1200);
+
 	var space = 40 / 1440 * innerWidth;
 	
 	new Swiper('.hero .swiper', {
