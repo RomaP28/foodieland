@@ -1,35 +1,3 @@
-#preloader
-  #path
-    fill: transparent
-    stroke: #000
-    stroke-width: 1
-    stroke-dasharray: 1028.7
-    stroke-dashoffset: 1028.7
-    animation: draw 7s cubic-bezier(.51,.29,.09,1) infinite, filling 7s linear infinite
-
-  #path2
-    fill: transparent
-    animation: dot-fill 7s linear infinite
-
-@keyframes draw
-  100%
-    stroke-dashoffset: 0
-
-@keyframes filling
-  10%
-    fill: transparent
-  15%
-    fill: #000
-  100%
-    fill: #000
-
-@keyframes dot-fill
-  15%
-    fill: transparent
-  16%
-    fill: #FF7426
-  100%
-    fill: #FF7426
 header
   padding: 4rem 0
   position: fixed
@@ -53,6 +21,9 @@ header
 
   .logo
     width: 12rem
+
+  .hamburger-menu
+    display: none
 
   .menu
     column-gap: 6rem
@@ -95,6 +66,52 @@ header
     &:hover
       background: url(../img/instagram-hover.svg) no-repeat center center/contain
 
+#preloader
+  #path
+    fill: transparent
+    stroke: #000
+    stroke-width: 1
+    stroke-dasharray: 1028.7
+    stroke-dashoffset: 1028.7
+    animation: draw 7s cubic-bezier(.51,.29,.09,1) infinite, filling 7s linear infinite
+
+  #path2
+    fill: transparent
+    animation: dot-fill 7s linear infinite
+
+@keyframes draw
+  100%
+    stroke-dashoffset: 0
+
+@keyframes filling
+  10%
+    fill: transparent
+  15%
+    fill: #000
+  100%
+    fill: #000
+
+@keyframes dot-fill
+  15%
+    fill: transparent
+  16%
+    fill: #FF7426
+  100%
+    fill: #FF7426
 
 main
   padding-top: 10.5rem
+
+
+
+@media (max-width: 768px)
+  header
+    padding: 1rem 1.5rem
+    &.active
+      padding: .5rem 1.5rem
+
+    .menu
+      display: none
+
+    .social-links
+      column-gap: 2rem
