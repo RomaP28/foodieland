@@ -14,9 +14,9 @@
                             Hot Recipes
                         </div>
                         <h2>
-                            Spicy delicious chicken wings
+                            Spicy delicious and chicken wings
                         </h2>
-                        <p class="text">
+                        <p class="subtitle">
                             Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim
                         </p>
                         <ul class="tags">
@@ -60,7 +60,7 @@
                         <h2>
                             Spicy delicious chicken wings
                         </h2>
-                        <p class="text">
+                        <p class="subtitle">
                             Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim
                         </p>
                         <ul class="tags">
@@ -104,7 +104,7 @@
                         <h2>
                             Spicy delicious chicken wings
                         </h2>
-                        <p class="text">
+                        <p class="subtitle">
                             Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim
                         </p>
                         <ul class="tags">
