@@ -145,6 +145,7 @@
                 <h2>Categories</h2>
                 <a href="#" class="btn">View All Categories</a>
             </div>
+        </div>
             <div class="swiper">
                 <div class="swiper-wrapper">
                     <a href="#" class="swiper-slide" style="background-image: linear-gradient(to bottom, rgba(112, 130, 70, 0), rgba(112, 130, 70,.10))">
@@ -179,7 +180,6 @@
                     </a>
                 </div>
             </div>
-        </div>
     </section>
     <section class="recipes">
         <div class="container">

@@ -17,6 +17,21 @@
 		spaceBetween: space,
 	})
 	
+	if(window.matchMedia('(max-width: 768px)').matches) {
+		new Swiper('.categories .swiper', {
+			loop: true,
+			autoplay: true,
+			slidesPerView: 3,
+			// delay: 10,
+			// speed: 1500,
+			// disableOnInteraction: false,
+			// centeredSlides: true,
+			// spaceBetween: space,
+		})
+	}
+	
+
+	
 	$(window).scroll(function() {
 		var $height = $(window).scrollTop();
 		if($height > 50) {
