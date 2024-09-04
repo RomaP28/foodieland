@@ -22,11 +22,17 @@
 			loop: true,
 			autoplay: true,
 			slidesPerView: 3,
-			// delay: 10,
-			// speed: 1500,
-			// disableOnInteraction: false,
-			// centeredSlides: true,
-			// spaceBetween: space,
+		})
+		
+		new Swiper('.recipes .swiper', {
+			autoplay: {
+				enabled: true,
+				delay: 0,
+			},
+			loop: true,
+			speed: 12000,
+			slidesPerView: 1,
+			spaceBetween: space,
 		})
 	}
 	

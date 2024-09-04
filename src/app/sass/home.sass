@@ -410,20 +410,20 @@
         padding: 2rem 1.5rem
 
       .cat
-        padding: 1rem 1.6rem
+        padding: .7rem 1.6rem
         img
           max-width: 1.7rem
 
       h2
-        font-size: 3.5rem
-        line-height: 4.6rem
-        margin-top: 2rem
+        font-size: 3rem
+        line-height: 1
+        margin-top: 1rem
 
       .subtitle
         margin-top: 1rem
 
       .tags
-        margin-top: 2rem
+        margin-top: 1rem
         li
           padding: .8rem 1.2rem
         img
@@ -434,10 +434,13 @@
 
       .video
         width: fit-content
-        margin: 2rem auto 0
+        margin: 1rem auto 0
+
+      .btn
+        padding: 1.4rem 7.5rem 1.4rem 3.7rem
 
       .author
-        margin-top: 2rem
+        margin-top: 1rem
 
     .categories
       padding-top: 2rem
@@ -453,7 +456,23 @@
 
           .cat-title
             margin-top: 3rem
+
     .recipes
       padding-top: 2rem
+
+      .subtitle
+        margin: 1rem auto 0
+
+      .swiper
+        margin-top: 1rem
+        transition-timing-function: linear
+        //overflow-y: unset
+        &-wrapper
+          transition-timing-function: linear
+          column-gap: unset
+          justify-content: unset
+          display: flex
+        &-slide
+          padding: 1rem 1rem 3.2rem
 
 @import "_components/_footer"
