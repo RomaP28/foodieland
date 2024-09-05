@@ -34,6 +34,18 @@
 			slidesPerView: 1,
 			spaceBetween: space,
 		})
+		
+		new Swiper('.day-recipes .swiper', {
+			// autoplay: {
+			// 	enabled: true,
+			// 	delay: 0,
+			// },
+			autoplay: true,
+			loop: true,
+			// speed: 12000,
+			slidesPerView: 1.3,
+			spaceBetween: space,
+		})
 	}
 	
 
