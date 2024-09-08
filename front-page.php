@@ -397,160 +397,176 @@
                     Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim
                 </p>
             </div>
+
+          <?php $the_query = new WP_Query( array(
+            'orderby' =>'date',
+            'order' =>'DESC',
+            'posts_per_page'=> -1,
+            'post_type' => 'recipe',
+            )
+          ) ?>
+
             <div class="swiper">
                 <div class="swiper-wrapper">
+                  <?php while ($the_query -> have_posts()) : $the_query -> the_post();
+                  $time = get_field('time', get_the_ID());  ?>
+
                     <div class="swiper-slide">
                         <div class="add-to-favorite"></div>
                         <div class="img-wrap">
-                            <img src="<?php echo get_template_directory_uri(). '/src/app/img/001.webp'?>" alt="recipe">
-                        </div>
+                            <?php the_post_thumbnail(); ?> </div>
                         <h3>
-                            <a href="#">Mixed Tropical Fruit Salad with Superfood Boosts</a>
+                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         </h3>
                         <div class="bottom">
-                            <div class="time">
-                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?>" alt="time">
-                                30 Minutes
-                            </div>
+                            <?php if(!empty($time)): ?>
+                                <div class="time">
+                                    <img src="<?php echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?>" alt="time">
+                                    <?php echo $time; ?>
+                                </div>
+                            <?php endif; ?>
                             <div class="cat">
                                 <img src="<?php echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?>" alt="category">
-                                Healthy
+                                <?php the_category(); ?>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="add-to-favorite"></div>
-                        <div class="img-wrap">
-                            <img src="<?php echo get_template_directory_uri(). '/src/app/img/002.webp'?>" alt="">
-                        </div>
-                        <h3>
-                            <a href="#">FBig and Juicy Wagyu Beef Cheeseburger</a>
-                        </h3>
-                        <div class="bottom">
-                            <div class="time">
-                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?>" alt="time">
-                                30 Minutes
-                            </div>
-                            <div class="cat">
-                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?>" alt="category">
-                                Western
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="add-to-favorite"></div>
-                        <div class="img-wrap">
-                            <img src="<?php echo get_template_directory_uri(). '/src/app/img/003.webp'?>" alt="">
-                        </div>
-                        <h3>
-                            <a href="#">Healthy Japanese Fried Rice with Asparagus</a>
-                        </h3>
-                        <div class="bottom">
-                            <div class="time">
-                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?>" alt="time">
-                                30 Minutes
-                            </div>
-                            <div class="cat">
-                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?>" alt="category">
-                                Healthy
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="add-to-favorite"></div>
-                        <div class="img-wrap">
-                            <img src="<?php echo get_template_directory_uri(). '/src/app/img/004.webp'?>" alt="">
-                        </div>
-                        <h3>
-                            <a href="#">Cauliflower Walnut Vegetarian Taco Meat</a>
-                        </h3>
-                        <div class="bottom">
-                            <div class="time">
-                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?>" alt="time">
-                                30 Minutes
-                            </div>
-                            <div class="cat">
-                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?>" alt="category">
-                                Eastern
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="add-to-favorite"></div>
-                        <div class="img-wrap">
-                            <img src="<?php echo get_template_directory_uri(). '/src/app/img/005.webp'?>" alt="">
-                        </div>
-                        <h3>
-                            <a href="#">Rainbow Chicken Salad with Almond Honey Mustard Dressing</a>
-                        </h3>
-                        <div class="bottom">
-                            <div class="time">
-                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?>" alt="time">
-                                30 Minutes
-                            </div>
-                            <div class="cat">
-                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?>" alt="category">
-                                Healthy
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="add-to-favorite"></div>
-                        <div class="img-wrap">
-                            <img src="<?php echo get_template_directory_uri(). '/src/app/img/006.webp'?>" alt="">
-                        </div>
-                        <h3>
-                            <a href="#">Barbeque Spicy Sandwiches with Chips</a>
-                        </h3>
-                        <div class="bottom">
-                            <div class="time">
-                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?>" alt="time">
-                                30 Minutes
-                            </div>
-                            <div class="cat">
-                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?>" alt="category">
-                                Snack
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="add-to-favorite"></div>
-                        <div class="img-wrap">
-                            <img src="<?php echo get_template_directory_uri(). '/src/app/img/007.webp'?>" alt="">
-                        </div>
-                        <h3>
-                            <a href="#">Firecracker Vegan Lettuce Wraps - Spicy!</a>
-                        </h3>
-                        <div class="bottom">
-                            <div class="time">
-                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?>" alt="time">
-                                30 Minutes
-                            </div>
-                            <div class="cat">
-                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?>" alt="category">
-                                Seafood
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="add-to-favorite"></div>
-                        <div class="img-wrap">
-                            <img src="<?php echo get_template_directory_uri(). '/src/app/img/008.webp'?>" alt="">
-                        </div>
-                        <h3>
-                            <a href="#">Chicken Ramen Soup with Mushroom</a>
-                        </h3>
-                        <div class="bottom">
-                            <div class="time">
-                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?>" alt="time">
-                                30 Minutes
-                            </div>
-                            <div class="cat">
-                                <img src="<?php echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?>" alt="category">
-                                Japanese
-                            </div>
-                        </div>
-                    </div>
+
+                  <?php endwhile; ?>
+
+<!--                    <div class="swiper-slide">-->
+<!--                        <div class="add-to-favorite"></div>-->
+<!--                        <div class="img-wrap">-->
+<!--                            <img src="--><?php //echo get_template_directory_uri(). '/src/app/img/002.webp'?><!--" alt="">-->
+<!--                        </div>-->
+<!--                        <h3>-->
+<!--                            <a href="#">FBig and Juicy Wagyu Beef Cheeseburger</a>-->
+<!--                        </h3>-->
+<!--                        <div class="bottom">-->
+<!--                            <div class="time">-->
+<!--                                <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?><!--" alt="time">-->
+<!--                                30 Minutes-->
+<!--                            </div>-->
+<!--                            <div class="cat">-->
+<!--                                <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?><!--" alt="category">-->
+<!--                                Western-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="swiper-slide">-->
+<!--                        <div class="add-to-favorite"></div>-->
+<!--                        <div class="img-wrap">-->
+<!--                            <img src="--><?php //echo get_template_directory_uri(). '/src/app/img/003.webp'?><!--" alt="">-->
+<!--                        </div>-->
+<!--                        <h3>-->
+<!--                            <a href="#">Healthy Japanese Fried Rice with Asparagus</a>-->
+<!--                        </h3>-->
+<!--                        <div class="bottom">-->
+<!--                            <div class="time">-->
+<!--                                <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?><!--" alt="time">-->
+<!--                                30 Minutes-->
+<!--                            </div>-->
+<!--                            <div class="cat">-->
+<!--                                <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?><!--" alt="category">-->
+<!--                                Healthy-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="swiper-slide">-->
+<!--                        <div class="add-to-favorite"></div>-->
+<!--                        <div class="img-wrap">-->
+<!--                            <img src="--><?php //echo get_template_directory_uri(). '/src/app/img/004.webp'?><!--" alt="">-->
+<!--                        </div>-->
+<!--                        <h3>-->
+<!--                            <a href="#">Cauliflower Walnut Vegetarian Taco Meat</a>-->
+<!--                        </h3>-->
+<!--                        <div class="bottom">-->
+<!--                            <div class="time">-->
+<!--                                <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?><!--" alt="time">-->
+<!--                                30 Minutes-->
+<!--                            </div>-->
+<!--                            <div class="cat">-->
+<!--                                <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?><!--" alt="category">-->
+<!--                                Eastern-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="swiper-slide">-->
+<!--                        <div class="add-to-favorite"></div>-->
+<!--                        <div class="img-wrap">-->
+<!--                            <img src="--><?php //echo get_template_directory_uri(). '/src/app/img/005.webp'?><!--" alt="">-->
+<!--                        </div>-->
+<!--                        <h3>-->
+<!--                            <a href="#">Rainbow Chicken Salad with Almond Honey Mustard Dressing</a>-->
+<!--                        </h3>-->
+<!--                        <div class="bottom">-->
+<!--                            <div class="time">-->
+<!--                                <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?><!--" alt="time">-->
+<!--                                30 Minutes-->
+<!--                            </div>-->
+<!--                            <div class="cat">-->
+<!--                                <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?><!--" alt="category">-->
+<!--                                Healthy-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="swiper-slide">-->
+<!--                        <div class="add-to-favorite"></div>-->
+<!--                        <div class="img-wrap">-->
+<!--                            <img src="--><?php //echo get_template_directory_uri(). '/src/app/img/006.webp'?><!--" alt="">-->
+<!--                        </div>-->
+<!--                        <h3>-->
+<!--                            <a href="#">Barbeque Spicy Sandwiches with Chips</a>-->
+<!--                        </h3>-->
+<!--                        <div class="bottom">-->
+<!--                            <div class="time">-->
+<!--                                <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?><!--" alt="time">-->
+<!--                                30 Minutes-->
+<!--                            </div>-->
+<!--                            <div class="cat">-->
+<!--                                <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?><!--" alt="category">-->
+<!--                                Snack-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="swiper-slide">-->
+<!--                        <div class="add-to-favorite"></div>-->
+<!--                        <div class="img-wrap">-->
+<!--                            <img src="--><?php //echo get_template_directory_uri(). '/src/app/img/007.webp'?><!--" alt="">-->
+<!--                        </div>-->
+<!--                        <h3>-->
+<!--                            <a href="#">Firecracker Vegan Lettuce Wraps - Spicy!</a>-->
+<!--                        </h3>-->
+<!--                        <div class="bottom">-->
+<!--                            <div class="time">-->
+<!--                                <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?><!--" alt="time">-->
+<!--                                30 Minutes-->
+<!--                            </div>-->
+<!--                            <div class="cat">-->
+<!--                                <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?><!--" alt="category">-->
+<!--                                Seafood-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="swiper-slide">-->
+<!--                        <div class="add-to-favorite"></div>-->
+<!--                        <div class="img-wrap">-->
+<!--                            <img src="--><?php //echo get_template_directory_uri(). '/src/app/img/008.webp'?><!--" alt="">-->
+<!--                        </div>-->
+<!--                        <h3>-->
+<!--                            <a href="#">Chicken Ramen Soup with Mushroom</a>-->
+<!--                        </h3>-->
+<!--                        <div class="bottom">-->
+<!--                            <div class="time">-->
+<!--                                <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?><!--" alt="time">-->
+<!--                                30 Minutes-->
+<!--                            </div>-->
+<!--                            <div class="cat">-->
+<!--                                <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?><!--" alt="category">-->
+<!--                                Japanese-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
                 </div>
             </div>
         </div>

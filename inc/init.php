@@ -6,6 +6,8 @@ function p($arr) {
   echo '</pre>';
 }
 
+add_theme_support('post-thumbnails');
+
 function smartwp_remove_wp_block_library_css(){
   wp_dequeue_style( 'wp-block-library' );
   wp_dequeue_style( 'wp-block-library-theme' );
@@ -89,12 +91,24 @@ function foodieland_recipes_init() {
 //    'capability_type'    => 'post',
 //    'has_archive'        => false,
 //    'hierarchical'       => false,
+    'taxonomies' => array('category', 'post_tag'),
     'menu_position'      => null,
     'menu_icon'          => 'dashicons-food',
-    'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+    'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt'),
   );
 
   register_post_type( 'recipe', $args );
+
+  $args = array(
+    'labels' => array(
+      		'name'                     => 'Categories',
+		      'singular_name'            => 'Category',
+		      'menu_name'                => 'Categories',
+    ),
+    'public' => true,
+  );
+
+  register_taxonomy( 'custom_category', array( 'recipes' ), $args );
 }
 
 add_action( 'init', 'foodieland_recipes_init' );
