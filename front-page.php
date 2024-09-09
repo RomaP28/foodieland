@@ -146,40 +146,59 @@
                 <a href="#" class="btn">View All Categories</a>
             </div>
         </div>
+        <?php
+        $categories = get_terms( array(
+          'taxonomy'   => 'category',
+          'post_type'  => 'recipes',
+          'number' => 6,
+          'hide_empty' => false,
+        ) );
+
+        if(!empty($categories)):
+        ?>
             <div class="swiper">
                 <div class="swiper-wrapper">
-                    <a href="#" class="swiper-slide" style="background-image: linear-gradient(to bottom, rgba(112, 130, 70, 0), rgba(112, 130, 70,.10))">
-                        <img src="<?php echo get_template_directory_uri() . '/src/app/img/breakfast.webp' ?>" alt="breakfast">
-                        <img class="shadow" src="<?php echo get_template_directory_uri() . '/src/app/img/breakfast.webp' ?>" alt="breakfast">
-                        <p class="cat-title">Breakfast</p>
-                    </a>
-                    <a href="#" class="swiper-slide" style="background-image: linear-gradient(to bottom, rgba(108, 198, 63, 0), rgba(108, 198, 63,.10))">
-                        <img src="<?php echo get_template_directory_uri() . '/src/app/img/vegan.webp' ?>" alt="vegan">
-                        <img class="shadow" src="<?php echo get_template_directory_uri() . '/src/app/img/vegan.webp' ?>" alt="breakfast">
-                        <p class="cat-title">Vegan</p>
-                    </a>
-                    <a href="#" class="swiper-slide" style="background-image: linear-gradient(to bottom, rgba(204, 38, 27, 0), rgba(204, 38, 27,.10))">
-                        <img src="<?php echo get_template_directory_uri() . '/src/app/img/meat.webp' ?>" alt="meat">
-                        <img class="shadow" src="<?php echo get_template_directory_uri() . '/src/app/img/meat.webp' ?>" alt="breakfast">
-                        <p class="cat-title">Meat</p>
-                    </a>
-                    <a href="#" class="swiper-slide" style="background-image: linear-gradient(to bottom, rgba(240, 158, 0, 0), rgba(240, 158, 0,.10))">
-                        <img src="<?php echo get_template_directory_uri() . '/src/app/img/dessert.webp' ?>" alt="dessert">
-                        <img class="shadow" src="<?php echo get_template_directory_uri() . '/src/app/img/dessert.webp' ?>" alt="breakfast">
-                        <p class="cat-title">Dessert</p>
-                    </a>
-                    <a href="#" class="swiper-slide" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .05))">
-                        <img src="<?php echo get_template_directory_uri() . '/src/app/img/lunch.webp' ?>" alt="lunch">
-                        <img class="shadow" src="<?php echo get_template_directory_uri() . '/src/app/img/lunch.webp' ?>" alt="breakfast">
-                        <p class="cat-title">Lunch</p>
-                    </a>
-                    <a href="#" class="swiper-slide" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .05))">
-                        <img src="<?php echo get_template_directory_uri() . '/src/app/img/chocolate.webp' ?>" alt="chocolate">
-                        <img class="shadow" src="<?php echo get_template_directory_uri() . '/src/app/img/chocolate.webp' ?>" alt="breakfast">
-                        <p class="cat-title">Chocolate</p>
-                    </a>
+                    <?php foreach ($categories as $cat):
+                      $cat_image = get_field('cat_image', 'category_'. $cat->term_id);
+                      $term_link = get_term_link( $cat )
+                    ?>
+                        <a href="#" class="swiper-slide" style="background-image: linear-gradient(to bottom, rgba(112, 130, 70, 0), rgba(112, 130, 70,.10))">
+                            <?php if(isset($cat_image['url']) && !empty($cat_image['url'])): ?>
+                                <img src="<?php echo $cat_image['url']; ?>" alt="<?php echo $cat->name; ?>">
+                                <img class="shadow" src="<?php echo $cat_image['url']; ?>" alt="<?php echo $cat->name; ?>">
+                            <?php endif; ?>
+                            <p class="cat-title"><?php echo $cat->name; ?></p>
+                        </a>
+                    <?php endforeach; ?>
+<!--                    <a href="#" class="swiper-slide" style="background-image: linear-gradient(to bottom, rgba(108, 198, 63, 0), rgba(108, 198, 63,.10))">-->
+<!--                        <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/vegan.webp' ?><!--" alt="vegan">-->
+<!--                        <img class="shadow" src="--><?php //echo get_template_directory_uri() . '/src/app/img/vegan.webp' ?><!--" alt="breakfast">-->
+<!--                        <p class="cat-title">Vegan</p>-->
+<!--                    </a>-->
+<!--                    <a href="#" class="swiper-slide" style="background-image: linear-gradient(to bottom, rgba(204, 38, 27, 0), rgba(204, 38, 27,.10))">-->
+<!--                        <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/meat.webp' ?><!--" alt="meat">-->
+<!--                        <img class="shadow" src="--><?php //echo get_template_directory_uri() . '/src/app/img/meat.webp' ?><!--" alt="breakfast">-->
+<!--                        <p class="cat-title">Meat</p>-->
+<!--                    </a>-->
+<!--                    <a href="#" class="swiper-slide" style="background-image: linear-gradient(to bottom, rgba(240, 158, 0, 0), rgba(240, 158, 0,.10))">-->
+<!--                        <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/dessert.webp' ?><!--" alt="dessert">-->
+<!--                        <img class="shadow" src="--><?php //echo get_template_directory_uri() . '/src/app/img/dessert.webp' ?><!--" alt="breakfast">-->
+<!--                        <p class="cat-title">Dessert</p>-->
+<!--                    </a>-->
+<!--                    <a href="#" class="swiper-slide" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .05))">-->
+<!--                        <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/lunch.webp' ?><!--" alt="lunch">-->
+<!--                        <img class="shadow" src="--><?php //echo get_template_directory_uri() . '/src/app/img/lunch.webp' ?><!--" alt="breakfast">-->
+<!--                        <p class="cat-title">Lunch</p>-->
+<!--                    </a>-->
+<!--                    <a href="#" class="swiper-slide" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .05))">-->
+<!--                        <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/chocolate.webp' ?><!--" alt="chocolate">-->
+<!--                        <img class="shadow" src="--><?php //echo get_template_directory_uri() . '/src/app/img/chocolate.webp' ?><!--" alt="breakfast">-->
+<!--                        <p class="cat-title">Chocolate</p>-->
+<!--                    </a>-->
                 </div>
             </div>
+
+        <?php endif; ?>
     </section>
     <section class="recipes">
         <div class="container">
@@ -433,140 +452,6 @@
                     </div>
 
                   <?php endwhile; ?>
-
-<!--                    <div class="swiper-slide">-->
-<!--                        <div class="add-to-favorite"></div>-->
-<!--                        <div class="img-wrap">-->
-<!--                            <img src="--><?php //echo get_template_directory_uri(). '/src/app/img/002.webp'?><!--" alt="">-->
-<!--                        </div>-->
-<!--                        <h3>-->
-<!--                            <a href="#">FBig and Juicy Wagyu Beef Cheeseburger</a>-->
-<!--                        </h3>-->
-<!--                        <div class="bottom">-->
-<!--                            <div class="time">-->
-<!--                                <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?><!--" alt="time">-->
-<!--                                30 Minutes-->
-<!--                            </div>-->
-<!--                            <div class="cat">-->
-<!--                                <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?><!--" alt="category">-->
-<!--                                Western-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="swiper-slide">-->
-<!--                        <div class="add-to-favorite"></div>-->
-<!--                        <div class="img-wrap">-->
-<!--                            <img src="--><?php //echo get_template_directory_uri(). '/src/app/img/003.webp'?><!--" alt="">-->
-<!--                        </div>-->
-<!--                        <h3>-->
-<!--                            <a href="#">Healthy Japanese Fried Rice with Asparagus</a>-->
-<!--                        </h3>-->
-<!--                        <div class="bottom">-->
-<!--                            <div class="time">-->
-<!--                                <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?><!--" alt="time">-->
-<!--                                30 Minutes-->
-<!--                            </div>-->
-<!--                            <div class="cat">-->
-<!--                                <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?><!--" alt="category">-->
-<!--                                Healthy-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="swiper-slide">-->
-<!--                        <div class="add-to-favorite"></div>-->
-<!--                        <div class="img-wrap">-->
-<!--                            <img src="--><?php //echo get_template_directory_uri(). '/src/app/img/004.webp'?><!--" alt="">-->
-<!--                        </div>-->
-<!--                        <h3>-->
-<!--                            <a href="#">Cauliflower Walnut Vegetarian Taco Meat</a>-->
-<!--                        </h3>-->
-<!--                        <div class="bottom">-->
-<!--                            <div class="time">-->
-<!--                                <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?><!--" alt="time">-->
-<!--                                30 Minutes-->
-<!--                            </div>-->
-<!--                            <div class="cat">-->
-<!--                                <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?><!--" alt="category">-->
-<!--                                Eastern-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="swiper-slide">-->
-<!--                        <div class="add-to-favorite"></div>-->
-<!--                        <div class="img-wrap">-->
-<!--                            <img src="--><?php //echo get_template_directory_uri(). '/src/app/img/005.webp'?><!--" alt="">-->
-<!--                        </div>-->
-<!--                        <h3>-->
-<!--                            <a href="#">Rainbow Chicken Salad with Almond Honey Mustard Dressing</a>-->
-<!--                        </h3>-->
-<!--                        <div class="bottom">-->
-<!--                            <div class="time">-->
-<!--                                <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?><!--" alt="time">-->
-<!--                                30 Minutes-->
-<!--                            </div>-->
-<!--                            <div class="cat">-->
-<!--                                <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?><!--" alt="category">-->
-<!--                                Healthy-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="swiper-slide">-->
-<!--                        <div class="add-to-favorite"></div>-->
-<!--                        <div class="img-wrap">-->
-<!--                            <img src="--><?php //echo get_template_directory_uri(). '/src/app/img/006.webp'?><!--" alt="">-->
-<!--                        </div>-->
-<!--                        <h3>-->
-<!--                            <a href="#">Barbeque Spicy Sandwiches with Chips</a>-->
-<!--                        </h3>-->
-<!--                        <div class="bottom">-->
-<!--                            <div class="time">-->
-<!--                                <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?><!--" alt="time">-->
-<!--                                30 Minutes-->
-<!--                            </div>-->
-<!--                            <div class="cat">-->
-<!--                                <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?><!--" alt="category">-->
-<!--                                Snack-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="swiper-slide">-->
-<!--                        <div class="add-to-favorite"></div>-->
-<!--                        <div class="img-wrap">-->
-<!--                            <img src="--><?php //echo get_template_directory_uri(). '/src/app/img/007.webp'?><!--" alt="">-->
-<!--                        </div>-->
-<!--                        <h3>-->
-<!--                            <a href="#">Firecracker Vegan Lettuce Wraps - Spicy!</a>-->
-<!--                        </h3>-->
-<!--                        <div class="bottom">-->
-<!--                            <div class="time">-->
-<!--                                <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?><!--" alt="time">-->
-<!--                                30 Minutes-->
-<!--                            </div>-->
-<!--                            <div class="cat">-->
-<!--                                <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?><!--" alt="category">-->
-<!--                                Seafood-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="swiper-slide">-->
-<!--                        <div class="add-to-favorite"></div>-->
-<!--                        <div class="img-wrap">-->
-<!--                            <img src="--><?php //echo get_template_directory_uri(). '/src/app/img/008.webp'?><!--" alt="">-->
-<!--                        </div>-->
-<!--                        <h3>-->
-<!--                            <a href="#">Chicken Ramen Soup with Mushroom</a>-->
-<!--                        </h3>-->
-<!--                        <div class="bottom">-->
-<!--                            <div class="time">-->
-<!--                                <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/timer.webp'; ?><!--" alt="time">-->
-<!--                                30 Minutes-->
-<!--                            </div>-->
-<!--                            <div class="cat">-->
-<!--                                <img src="--><?php //echo get_template_directory_uri() . '/src/app/img/forkknife.webp'; ?><!--" alt="category">-->
-<!--                                Japanese-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
                 </div>
             </div>
         </div>
