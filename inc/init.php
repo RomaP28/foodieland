@@ -45,7 +45,7 @@ function foodieland_scripts() {
   if(is_front_page()){
     wp_enqueue_style('home-styles', get_template_directory_uri() . '/src/app/css/home.min.css');
   } else {
-    wp_enqueue_style('inner-styles', get_template_directory_uri() . '/src/app/css/inner.min.css', [], time());
+    wp_enqueue_style('inner-styles', get_template_directory_uri() . '/src/app/css/inner.min.css');
   }
 
 }
