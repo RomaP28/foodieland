@@ -68,3 +68,65 @@
         font-family: $inter-medium
         font-size: 1.2rem
         text-align: center
+  .info-section
+    margin-top: 6.4rem
+    .container
+      display: flex
+      column-gap: 4rem
+    .video
+      width: 84rem
+      height: 60rem
+      position: relative
+      overflow: hidden
+      border-radius: 3rem
+      cursor: pointer
+
+    .play,
+    .preview
+      position: absolute
+
+    .play
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 12rem
+      z-index: 2
+
+    .preview
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      z-index: 1
+      object-fit: cover
+
+    .nutrition
+      flex: 1
+      background: #E7FAFE
+      border-radius: 3rem
+      padding: 3.2rem
+      display: flex
+      flex-direction: column
+      h3
+        font-family: $inter-semibold
+        font-size: 2.4rem
+        margin-bottom: 2.4rem
+    .row
+      display: flex
+      justify-content: space-between
+      border-bottom: .1rem solid rgba(0, 0, 0, .1)
+      padding: 1.6rem 0
+    .name
+      color: rgba(0, 0, 0, .6)
+      font-family: $inter-medium
+      font-size: 1.8rem
+    .val
+      color: #000
+      font-family: $inter-medium
+      font-size: 1.8rem
+    .note
+      font-size: 1.6rem
+      margin-top: auto
+      color: rgba(0, 0, 0, .6)
+      text-align: center
+
