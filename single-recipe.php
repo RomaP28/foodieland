@@ -113,16 +113,51 @@ get_header();
                 <h3>Ingredients</h3>
                 <h4>For main dish</h4>
                 <ul>
-                    <li class="crossed"><img src="<?php echo get_template_directory_uri(). '/src/app/img/check.png'; ?>" alt="checked">Lorem ipsum dolor sit amet</li>
-                    <li><img src="<?php echo get_template_directory_uri(). '/src/app/img/unchecked.svg'; ?>" alt="unchecked">Lorem ipsum dolor sit amet</li>
-                    <li><img src="<?php echo get_template_directory_uri(). '/src/app/img/unchecked.svg'; ?>" alt="unchecked">Lorem ipsum dolor sit amet</li>
-                    <li><img src="<?php echo get_template_directory_uri(). '/src/app/img/unchecked.svg'; ?>" alt="unchecked">Lorem ipsum dolor sit amet</li>
-                    <li><img src="<?php echo get_template_directory_uri(). '/src/app/img/unchecked.svg'; ?>" alt="unchecked">Lorem ipsum dolor sit amet</li>
+                    <li>
+                        <label for="one">
+                            <input type="checkbox" id="one" class="checkbox">
+                            <span>Lorem ipsum dolor sit amet</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="two">
+                            <input type="checkbox" id="two" class="checkbox">
+                            <span>Lorem ipsum dolor sit amet</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="three">
+                            <input type="checkbox" id="three" class="checkbox">
+                            <span>Lorem ipsum dolor sit amet</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="four">
+                            <input type="checkbox" id="four" class="checkbox">
+                            <span>Lorem ipsum dolor sit amet</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="five">
+                            <input type="checkbox" id="five" class="checkbox">
+                            <span>Lorem ipsum dolor sit amet</span>
+                        </label>
+                    </li>
                 </ul>
                 <h4 class="sauce">For the sauce</h4>
                 <ul>
-                    <li><img src="<?php echo get_template_directory_uri(). '/src/app/img/unchecked.svg'; ?>" alt="unchecked">Lorem ipsum dolor sit amet</li>
-                    <li><img src="<?php echo get_template_directory_uri(). '/src/app/img/unchecked.svg'; ?>" alt="unchecked">Lorem ipsum dolor sit amet</li>
+                    <li>
+                        <label for="six">
+                            <input type="checkbox" id="six" class="checkbox">
+                            <span>Lorem ipsum dolor sit amet</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="seven">
+                            <input type="checkbox" id="seven" class="checkbox">
+                            <span>Lorem ipsum dolor sit amet</span>
+                        </label>
+                    </li>
                 </ul>
             </div>
             <div class="other-recipe">
@@ -165,9 +200,35 @@ get_header();
     <section class="directions">
         <div class="container">
             <h3>Directions</h3>
+            <ul>
+                <li>
+                    <label for="first">
+                        <input type="checkbox" id="first" class="checkbox">
+                        <span>1. Lorem ipsum dolor sit amet</span>
+                    </label>
+                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                    <img src="<?php echo get_template_directory_uri() . '/src/app/img/post-img.webp'; ?>" alt="image">
+                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                </li>
+                <li>
+                    <label for="second">
+                        <input type="checkbox" id="second" class="checkbox">
+                        <span>2. Lorem ipsum dolor sit amet</span>
+                    </label>
+                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                </li>
+                <li>
+                    <label for="third">
+                        <input type="checkbox" id="third" class="checkbox">
+                        <span>3. Lorem ipsum dolor sit amet</span>
+                    </label>
+                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                </li>
+            </ul>
         </div>
-
     </section>
+
+  <?php echo get_template_part('template-parts/subscribe-form');?>
 </main>
 
 

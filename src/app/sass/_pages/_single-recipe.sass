@@ -11,6 +11,31 @@
   h5
     font-size: 2rem
 
+  label
+    position: relative
+    cursor: pointer
+    span:before
+      position: absolute
+      content: ''
+      background: url(../img/unchecked.svg) no-repeat center center/contain
+      width: 2.4rem
+      height: 2.4rem
+      z-index: 1
+      left: -4.8rem
+
+  .checkbox
+    position: absolute
+    opacity: 0
+
+    &:checked
+      & ~ span
+        color: rgba(0, 0, 0, .6)
+        text-decoration: line-through
+        position: relative
+        &:before
+          background: url(../img/check.png) no-repeat center center/contain
+
+
   .title-section
     padding-top: 8rem
     .container
@@ -161,7 +186,7 @@
         display: flex
         align-items: center
         column-gap: 2.4rem
-        padding: 3.2rem 0
+        padding: 3.2rem 0 3.2rem 4.8rem
         border-bottom: .1rem solid rgba(0,0,0,.1)
         font-size: 1.8rem
         img
@@ -170,9 +195,6 @@
     .sauce
       margin-top: 6.4rem
 
-    .crossed
-      color: rgba(0, 0, 0, .6)
-      text-decoration: line-through
 
     .other-recipe
       flex: 1
@@ -207,3 +229,33 @@
     .commercial
       margin-top: 8rem
 
+  .directions
+    padding-bottom: 16rem
+    ul
+      max-width: 84rem
+      padding-left: 4.8rem
+
+    li
+      border-bottom: .1rem solid rgba(0, 0, 0, .1)
+      padding: 4.8rem 0
+
+    p
+      margin-top: 2.4rem
+      font-size: 1.6rem
+      color: rgba(0, 0, 0, .6)
+
+    img
+      margin: 4.8rem 0 2.4rem
+
+    label
+      font-family: $inter-semibold
+      font-size: 2.4rem
+
+@media (max-width: 768px)
+  .single-recipe
+    .title-section
+      padding-top: 3rem
+      .container
+        flex-direction: column
+      h1
+        font-size: 4rem
