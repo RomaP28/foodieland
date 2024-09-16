@@ -55,6 +55,13 @@
 		$('header').removeClass('open');
 	})
 	
+	$(document).on('click', function (e) {
+		if(!$(e.target).closest('.menu').get(0) && !$(e.target).closest('.burger-menu').get(0)){
+			$('.menu-header-menu-container').slideUp();
+			$('header').removeClass('open');
+		}
+	})
+	
 
 	
 	$(window).scroll(function() {
