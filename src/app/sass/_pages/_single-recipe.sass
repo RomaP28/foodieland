@@ -202,6 +202,13 @@
       h3
         margin-bottom: 3.2rem
 
+      h5
+        display: -webkit-box
+        -webkit-box-orient: vertical
+        -webkit-line-clamp: 2
+        overflow: hidden
+        text-overflow: ellipsis
+
     .info
       flex: 1
       display: flex
@@ -267,12 +274,11 @@
       span:before
         width: 1.8rem
         height: 1.8rem
-        left: -4.8rem
-
+        left: -3rem
 
 
     .title-section
-      padding-top: 4rem
+      padding-top: 0
       .container
         flex-direction: column
       .bottom
@@ -328,6 +334,29 @@
       .container
          flex-direction: column
       .left
+        width: 100%
+        h3
+          margin-bottom: 3rem
         li
           padding: 1.8rem 0 1.8rem 4rem
           font-size: 1.6rem
+      .sauce
+        margin-top: 3rem
+      .other-recipe
+        margin-top: 5rem
+        h3
+          margin-bottom: 3rem
+
+      .commercial
+        margin-top: 1.5rem
+
+      .item
+        &:nth-child(1),
+        &:nth-child(2)
+          margin-bottom: 1.5rem
+
+    .directions
+      h3
+        margin-top: 5rem
+      ul
+        padding-left: 2.8rem

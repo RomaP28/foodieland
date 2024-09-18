@@ -5,6 +5,7 @@ function p($arr) {
   print_r($arr);
   echo '</pre>';
 }
+remove_action('wp_print_styles', 'print_emoji_styles');
 
 add_theme_support('post-thumbnails');
 
