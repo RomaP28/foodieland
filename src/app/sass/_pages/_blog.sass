@@ -1,0 +1,107 @@
+.blogPage
+  h1
+    margin-top: 8rem
+    text-align: center
+    font-family: $inter-semibold
+    font-size: 6.4rem
+    color: #000
+    &+p
+      margin-top: 2.4rem
+      text-align: center
+      font-size: 1.6rem
+      color: rgba(0,0,0,.6)
+
+  .search-form
+    .wrapper
+      background: #ffffff
+      border-radius: 2.4rem
+      display: flex
+      max-width: 70rem
+      margin: 8rem auto 0
+      padding: 1rem
+      border: .1rem solid rgba(0,0,0,.1)
+
+      label
+        flex: 1
+        display: flex
+
+      [type="search"]
+        width: 100%
+        border: none
+        outline: none
+        font-family: $inter-medium
+        font-size: 1.4rem
+        padding: 0 2.2rem
+        &::placeholder
+          font-family: $inter-medium
+          font-size: 1.4rem
+          color: rgba(0,0,0,.4)
+
+  .main-content
+    margin: 8rem 0 18rem
+    display: flex
+    column-gap: 4rem
+
+    .post
+      display: flex
+      column-gap: 4rem
+      .img-wrap
+        overflow: hidden
+        max-width: 29rem
+        height: 20rem
+        border-radius: 2rem
+        img
+          height: 100%
+          object-fit: cover
+          object-position: center
+      .info
+        max-width: 51rem
+        display: flex
+        flex-direction: column
+        justify-content: center
+      h2
+        font-size: 2.4rem
+        font-family: $inter-semibold
+      p
+        margin-top: 1.6rem
+        font-size: 1.6rem
+        color: rgba(0, 0, 0, .6)
+        display: -webkit-box
+        -webkit-box-orient: vertical
+        -webkit-line-clamp: 2
+        overflow: hidden
+        text-overflow: ellipsis
+
+      .bottom
+        display: flex
+        align-items: center
+        margin-top: 3.2rem
+      .author
+        padding-right: 2.4rem
+        display: flex
+        align-items: center
+        column-gap: 1.6rem
+        font-family: $inter-bold
+        font-size: 1.6rem
+        color: #000
+        img
+          width: 4rem
+
+      time
+        height: 4rem
+        font-size: 1.6rem
+        color: rgba(0, 0, 0, .6)
+        padding-left: 2.4rem
+        border-left: .1rem solid rgba(0,0,0,.1)
+        display: grid
+        place-content: center
+
+
+
+    .recipes
+      width: 40rem
+
+
+
+
+@import "../_components/_side-recipes"
