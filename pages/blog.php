@@ -30,7 +30,7 @@ get_header(); ?>
                                 <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_the_post_thumbnail_caption(); ?>">
                             </div>
                             <div class="info">
-                                <h2><?php the_title()?></h2>
+                                <h2><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h2>
                                 <?php the_excerpt();?>
                                 <div class="bottom">
                                     <div class="author">

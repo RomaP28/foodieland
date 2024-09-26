@@ -7,7 +7,6 @@ get_header();
 <main>
     <section class="title-section">
         <div class="container">
-<!--            --><?php //the_content(); ?>
             <div class="left">
                 <h1>
                   <?php the_title(); ?>
