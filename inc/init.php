@@ -5,32 +5,35 @@ function p($arr) {
   print_r($arr);
   echo '</pre>';
 }
-remove_action('wp_print_styles', 'print_emoji_styles');
 
-add_theme_support('post-thumbnails');
+function foodieland_init() {
+  add_theme_support( 'title-tag' );
+  remove_action('wp_print_styles', 'print_emoji_styles');
+  remove_action( 'wp_head', 'wp_generator' );
+  add_theme_support('post-thumbnails');
+  add_action( 'wp_enqueue_scripts', function() {
+    wp_dequeue_style( 'wp-block-library' );
+    wp_dequeue_style( 'wp-block-library-theme' );
+    wp_dequeue_style( 'wc-blocks-style' ); // Remove WooCommerce block CSS
+    wp_dequeue_style( 'global-styles' );
+    wp_dequeue_style( 'classic-theme-styles' );
+  }, 20 );
+  register_nav_menus(
+    array(
+      'header_menu' => esc_html__( 'Header Menu', 'foodieland' ),
+      'footer_menu' => esc_html__( 'Footer Menu', 'foodieland' ),
+    )
+  );
 
-function smartwp_remove_wp_block_library_css(){
-  wp_dequeue_style( 'wp-block-library' );
-  wp_dequeue_style( 'wp-block-library-theme' );
-  wp_dequeue_style( 'wc-blocks-style' ); // Remove WooCommerce block CSS
-  wp_dequeue_style( 'global-styles' );
-  wp_dequeue_style( 'classic-theme-styles' );
+  load_theme_textdomain( 'foodieland', get_template_directory() . '/lang' );
+
 }
-add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100 );
-remove_action( 'wp_head', 'wp_generator' );
 
-
-
-register_nav_menus(
-  array(
-    'header_menu' => esc_html__( 'Header Menu', 'foodieland' ),
-    'footer_menu' => esc_html__( 'Footer Menu', 'foodieland' ),
-  )
-);
+add_action( 'after_setup_theme', 'foodieland_init' );
 
 function foodieland_scripts() {
-  wp_enqueue_script( 'jquery-lib', get_template_directory_uri() . '/src/app/libs/jquery.min.js', '', '', false );
-  wp_enqueue_script( 'swiper-lib', get_template_directory_uri() . '/src/app/libs/swiper-bundle.min.js', 'jquery-lib', '', false );
+  wp_enqueue_script( 'jquery-lib', get_template_directory_uri() . '/src/app/libs/jquery.min.js', '', '', true );
+  wp_enqueue_script( 'swiper-lib', get_template_directory_uri() . '/src/app/libs/swiper-bundle.min.js', 'jquery-lib', '', true );
   wp_enqueue_script( 'scripts-main', get_template_directory_uri() . '/src/app/js/scripts.min.js', 'jquery-lib', '', true );
   wp_enqueue_style( 'swiper-styles', get_template_directory_uri() . '/src/app/libs/swiper-bundle.min.css');
 
@@ -40,6 +43,7 @@ function foodieland_scripts() {
     array(
       'ajaxurl' => admin_url('admin-ajax.php'),
       'nonce' => wp_create_nonce('ajax-nonce'),
+      'theme_url' => get_template_directory() . '/lang',
     )
   );
 

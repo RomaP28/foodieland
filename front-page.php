@@ -11,10 +11,10 @@
                     <div class="content">
                         <div class="cat">
                             <img src="<?php echo get_template_directory_uri() . '/src/app/img/hot.webp'; ?>" alt="hot recipes">
-                            Hot Recipes
+                            <?php _e('Hot Recipes', 'foodieland'); ?>
                         </div>
                         <h2>
-                            Spicy delicious and chicken wings
+                          <?php _e('Spicy delicious and chicken wings', 'foodieland'); ?>
                         </h2>
                         <p class="subtitle">
                             Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim
@@ -142,7 +142,7 @@
     <section class="categories">
         <div class="container">
             <div class="title">
-                <h2>Categories</h2>
+                <h2> <?php _e('Categories', 'foodieland'); ?></h2>
                 <a href="#" class="btn">View All Categories</a>
             </div>
         </div>
