@@ -100,6 +100,7 @@ function foodieland_recipes_init() {
     'menu_position'      => null,
     'menu_icon'          => 'dashicons-food',
     'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt'),
+    'show_in_rest'       => true,
   );
 
   register_post_type( 'recipe', $args );
